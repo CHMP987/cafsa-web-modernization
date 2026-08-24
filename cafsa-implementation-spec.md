@@ -87,6 +87,7 @@ cafsa-web/
 │   ├── pagina-credito.md
 │   ├── higiene-wp.md
 │   ├── gtm-events.json
+│   ├── reunion-mercadeo.md
 │   └── preview/         # HTML de propuesta (aviso en cada página)
 ├── tools/hygiene-check.mjs
 ├── stage-3/             # Vacía de producto (README de alcance)
@@ -103,6 +104,7 @@ Producción: `cafsa.fi.cr` (WordPress). Fuera: `ibanking.cafsa.fi.cr`.
 - Brief Crédito (`pagina-credito.md`).
 - Eventos GTM (`gtm-events.json`).
 - Checklist higiene (`higiene-wp.md`).
+- Brief de reunión / quién pega (`reunion-mercadeo.md`).
 - Vista previa HTML (`preview/index.html`, `preview/credito.html`): H1, skip, tarjetas, CTA al cotizador **real**. Banner: no es producción.
 
 **No hecho (y no se hace desde este repo)**
@@ -292,6 +294,7 @@ Chequeo (status, `h1`, meta description). No guardar POST ni archivos de forms.
 - `hygiene`: array de la sección 11
 - `metrics`: solo si hay CSV; si no, omitir o `null`
 - `warning`: nunca fingir datos de CAFSA
+- `section9`: los seis puntos evaluados con el HTML de la sección 11. `pass: false` hasta que `cafsa.fi.cr` cumpla. No es certificado legal ni publicación.
 
 ---
 
@@ -321,9 +324,9 @@ Chequeo (status, `h1`, meta description). No guardar POST ni archivos de forms.
 **Hecho aquí**
 
 - Propuesta alineada, spec, nota interna.
-- Briefs CTA / Crédito / higiene / GTM.
+- Briefs CTA / Crédito / higiene / GTM / reunión Mercadeo.
 - `experiment/preview/` (propuesta clickable, CTA al cotizador de producción).
-- Chequeo público en `output/hygiene-report.json`.
+- Chequeo público en `output/hygiene-report.json` (`section9` + `metrics`).
 
 **Falta (solo en `cafsa.fi.cr`)**
 

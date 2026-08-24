@@ -2,6 +2,8 @@
 
 Criterio de hecho: spec §9. Se marca en `cafsa.fi.cr`, no en este repo.
 
+`node tools/hygiene-check.mjs` escribe `section9` en `output/hygiene-report.json` (GET a las URLs de la spec). `pass: false` significa que WordPress aún no está hecho. No tachar esta lista solo porque exista el JSON.
+
 ## Home
 
 - [ ] Un `h1` = copy del hero.
