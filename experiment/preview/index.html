@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Propuesta: cotizar financiamiento CAFSA desde el inicio. No es el sitio en producción."
+    />
+    <title>Inicio (propuesta) — CAFSA</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+    <p class="banner-propuesta">
+      Propuesta visual. No es
+      <a href="https://www.cafsa.fi.cr/">cafsa.fi.cr</a>. El cotizador real sigue
+      en producción.
+    </p>
+    <header class="top">
+      <a class="logo" href="index.html" aria-label="CAFSA, Grupo Financiero">
+        <img
+          src="https://www.cafsa.fi.cr/wp-content/uploads/2026/05/Logo-Cafsa-NUEVO_N_tagline-scaled.png"
+          alt="CAFSA, Grupo Financiero"
+          width="180"
+          height="48"
+        />
+      </a>
+      <nav aria-label="Principal">
+        <a href="index.html" aria-current="page">Personas</a>
+        <a href="credito.html">Crédito</a>
+        <a href="https://www.cafsa.fi.cr/personas/leasing/">Leasing</a>
+        <a href="https://ibanking.cafsa.fi.cr/" class="btn-linea">CAFSA en línea</a>
+      </nav>
+    </header>
+    <section class="hero" id="contenido" aria-label="Destacado">
+      <img
+        class="hero-foto"
+        src="https://www.cafsa.fi.cr/wp-content/uploads/2026/05/Banner-Inicio.jpg"
+        alt="Tres personas sonriendo dentro de un auto"
+        width="1920"
+        height="1080"
+      />
+      <div class="hero-inner">
+        <h1 class="visually-hidden">Soluciones financieras para tu movilidad</h1>
+        <div class="acciones">
+          <a
+            class="btn btn-cotizar"
+            href="https://www.cafsa.fi.cr/cotizador-cafsa/"
+            data-cta="hero-cotizar"
+            >Cotizar</a
+          >
+          <a class="btn btn-ghost" href="credito.html">Ver crédito</a>
+        </div>
+      </div>
+    </section>
+    <p class="slides-note">
+      Los demás slides de campaña del home actual se mantienen. Este bloque solo
+      añade Cotizar sobre el mensaje de movilidad, sin rehacer la foto.
+    </p>
+    <main>
+      <h2>Nuestros productos</h2>
+      <div class="cards">
+        <a class="card" href="credito.html">
+          <strong>Crédito prendario</strong>
+          <p>Financiá un vehículo con prenda. Cotizá en el formulario que ya usa CAFSA.</p>
+          <span class="go">Ver crédito</span>
+        </a>
+        <a class="card" href="https://www.cafsa.fi.cr/personas/leasing/">
+          <strong>Leasing</strong>
+          <p>Arrendamiento. La ficha completa sigue en el sitio publicado.</p>
+          <span class="go">Ver en cafsa.fi.cr</span>
+        </a>
+        <a class="card" href="https://www.cafsa.fi.cr/personas/inversiones/">
+          <strong>Inversiones</strong>
+          <p>Certificados y ahorro. Sin cambios en esta propuesta.</p>
+          <span class="go">Ver en cafsa.fi.cr</span>
+        </a>
+      </div>
+      <aside class="fraude">
+        <h2>Evite fraudes</h2>
+        <p>
+          CAFSA no pide usuario ni contraseña por correo o WhatsApp. Sitio oficial:
+          www.cafsa.fi.cr
+        </p>
+      </aside>
+    </main>
+    <footer>
+      Propuesta de canal de cotización e higiene. No sustituye al WordPress de CAFSA.
+    </footer>
+    <script>
+      document.querySelector("[data-cta=hero-cotizar]")?.addEventListener("click", function () {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: "hero_cotizar_click", cta_location: "hero" });
+      });
+    </script>
+  </body>
+</html>

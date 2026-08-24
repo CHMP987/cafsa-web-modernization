@@ -1,0 +1,81 @@
+{
+  "generatedAt": "2026-08-24T22:38:24.642Z",
+  "note": "GET público. No son datos de analítica interna de CAFSA.",
+  "metrics": null,
+  "hygiene": [
+    {
+      "url": "https://www.cafsa.fi.cr/",
+      "status": 200,
+      "ms": 5019,
+      "h1Count": 0,
+      "h1": [],
+      "hasMetaDescription": false
+    },
+    {
+      "url": "https://www.cafsa.fi.cr/personas/credito/",
+      "status": 200,
+      "ms": 3271,
+      "h1Count": 5,
+      "h1": [
+        "Crédito Prendario",
+        "Purdy Cuotas",
+        "Financiamiento de motos",
+        "Toyota al rescate",
+        "Plan 0% Prima"
+      ],
+      "hasMetaDescription": false
+    },
+    {
+      "url": "https://www.cafsa.fi.cr/cotizador-cafsa/",
+      "status": 200,
+      "ms": 3087,
+      "h1Count": 0,
+      "h1": [],
+      "hasMetaDescription": false
+    },
+    {
+      "url": "https://www.cafsa.fi.cr/cotizador-enviado/",
+      "status": 200,
+      "ms": 1696,
+      "h1Count": 0,
+      "h1": [],
+      "hasMetaDescription": false
+    },
+    {
+      "url": "https://www.cafsa.fi.cr/en/",
+      "status": 403,
+      "ms": 1479,
+      "h1Count": 1,
+      "h1": [
+        "Sorry, you have been blocked"
+      ],
+      "hasMetaDescription": false
+    },
+    {
+      "url": "https://www.cafsa.fi.cr/test-menu/",
+      "status": 200,
+      "ms": 1439,
+      "h1Count": 1,
+      "h1": [
+        "test-menu"
+      ],
+      "hasMetaDescription": false
+    },
+    {
+      "url": "https://www.cafsa.fi.cr/test-form-fase2/",
+      "status": 200,
+      "ms": 2043,
+      "h1Count": 0,
+      "h1": [],
+      "hasMetaDescription": false
+    },
+    {
+      "url": "https://www.cafsa.fi.cr/step-2/",
+      "status": 200,
+      "ms": 2871,
+      "h1Count": 0,
+      "h1": [],
+      "hasMetaDescription": false
+    }
+  ]
+}

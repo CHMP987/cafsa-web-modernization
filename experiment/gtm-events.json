@@ -1,0 +1,14 @@
+{
+  "implementedBy": "GTM de CAFSA o su agencia",
+  "events": [
+    {
+      "name": "hero_cotizar_click",
+      "trigger": "click en CTA Cotizar del home",
+      "fields": {
+        "cta_location": "hero"
+      }
+    }
+  ],
+  "conversionPage": "/cotizador-enviado/",
+  "note": "Opcional. El done de la oferta no depende de estos eventos."
+}
