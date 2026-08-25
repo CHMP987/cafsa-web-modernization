@@ -1,9 +1,0 @@
-output/*
-!output/.gitkeep
-!output/README.md
-!output/hygiene-report.json
-
-# CSV de CAFSA, si lo entregan (spec §8)
-data/*.csv
-data/*.tsv
-data/*.xlsx
