@@ -5,3 +5,8 @@ out
 *.log
 .env*
 tsconfig.tsbuildinfo
+
+# Not needed to run the site
+.cursor/
+docs/
+costa-rica-obsolete-restaurant-websites.md
