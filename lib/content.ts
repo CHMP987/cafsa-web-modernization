@@ -2,7 +2,6 @@ const IMG = "https://dyj6gt4964deb.cloudfront.net/images";
 
 const whatsappMessage = "Hola, quisiera reservar una mesa en Lubnan.";
 
-// Reused across the dish grid and the narrative section.
 const mixturaImage = `${IMG}/dca70e1c-3a3f-4706-865a-ae2e91a2c281.jpeg`;
 
 export type Dish = {
@@ -71,12 +70,12 @@ export const content: RestaurantSite = {
     { name: "Mixtura Lubnan", image: mixturaImage },
   ],
   narrative: {
-    image: mixturaImage,
-    imageAlt: "Mixtura Lubnan",
+    image: "/images/mezze-spread.jpeg",
+    imageAlt: "Mesa de mezze libanés tradicional",
     phrases: [
-      "Desde el mediterráneo de Beirut",
-      "a tu mesa",
-      "Lo mejor de la comida libanesa tradicional",
+      "Recetas heredadas de generación en generación",
+      "Ingredientes que cruzan el Mediterráneo",
+      "La tradición libanesa en cada bocado",
     ],
   },
   hours: [

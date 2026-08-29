@@ -74,7 +74,7 @@ function MenuIcon({ className }: IconProps) {
 function TripAdvisorIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden>
-      <path d="M12 2l2.9 6.26L21.6 9.2l-4.8 4.5 1.16 6.72L12 17.27l-5.96 3.15L7.2 13.7 2.4 9.2l6.7-.94z" />
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm4 0a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm4.5-7H18c-1.1-1.78-3.08-3-5.5-3h-1c-2.42 0-4.4 1.22-5.5 3H5.5C4.67 10 4 10.67 4 11.5S4.67 13 5.5 13 7 12.33 7 11.5c0-.06 0-.12-.01-.18C7.87 9.92 9.34 9 11 9h2c1.66 0 3.13.92 4.01 2.32-.01.06-.01.12-.01.18 0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5S19.33 10 18.5 10z" />
     </svg>
   );
 }
@@ -106,7 +106,7 @@ const links: { label: string; href: string; icon: ReactNode }[] = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-ink/10 bg-paper px-4 py-10 pb-24 text-sm text-ink/70 md:pb-10">
+    <footer className="border-t border-ink/10 bg-paper px-4 py-10 pb-16 text-sm text-ink/70 md:pb-10">
       <div className="mx-auto flex max-w-5xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <p>{content.name}</p>
         <nav aria-label="Redes y contacto" className="flex flex-wrap items-center gap-x-4 gap-y-2">

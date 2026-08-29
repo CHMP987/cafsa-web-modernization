@@ -1,9 +1,15 @@
 import type { Metadata, Viewport } from "next";
-import { Rubik } from "next/font/google";
+import { Cormorant_Garamond, Rubik } from "next/font/google";
 import { ProposalBanner } from "@/components/ProposalBanner";
 import { WhatsAppBar } from "@/components/WhatsAppBar";
 import { content } from "@/lib/content";
 import "./globals.css";
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-cormorant",
+});
 
 const rubik = Rubik({
   subsets: ["latin"],
@@ -54,7 +60,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${rubik.variable} font-sans antialiased`}>
+        <body className={`${rubik.variable} ${cormorant.variable} font-sans antialiased`}>
         <ProposalBanner />
         {children}
         <WhatsAppBar />

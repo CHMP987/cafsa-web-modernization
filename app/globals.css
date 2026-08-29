@@ -6,7 +6,9 @@
   --color-paper: #f7f4ee;
   --color-ink: #161616;
   --color-stone: #1c1412;
+  --color-warm: #c8a96e;
   --font-sans: var(--font-rubik), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
 }
 
 html {
@@ -24,16 +26,23 @@ body {
   min-height: 44px;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   background: var(--color-lubnan);
   padding: 0.75rem 1.25rem;
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--color-paper);
-  transition: background-color 150ms ease;
+  transition: background-color 150ms ease, transform 100ms ease;
 }
 
 .btn-primary:hover {
   background: var(--color-lubnan-hover);
+}
+
+.btn-primary:active,
+.btn-outline:active {
+  transform: scale(0.98);
 }
 
 .btn-primary:focus-visible,
@@ -47,11 +56,13 @@ body {
   min-height: 44px;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
   border: 1px solid currentColor;
+  border-radius: 0.25rem;
   padding: 0.75rem 1.25rem;
   font-size: 0.875rem;
   font-weight: 500;
-  transition: background-color 150ms ease, color 150ms ease;
+  transition: background-color 150ms ease, color 150ms ease, transform 100ms ease;
 }
 
 .btn-outline:hover {
@@ -130,6 +141,36 @@ body {
   transform: none;
 }
 
+.reveal.delay-0 { transition-delay: 0ms; }
+.reveal.delay-1 { transition-delay: 80ms; }
+.reveal.delay-2 { transition-delay: 160ms; }
+.reveal.delay-3 { transition-delay: 240ms; }
+
+/* WhatsAppBar slide-up entrance */
+.whatsapp-bar-enter {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.whatsapp-bar-visible {
+  transform: none;
+  opacity: 1;
+  transition: transform 300ms ease-out, opacity 300ms ease-out;
+}
+
+/* Section separator */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-warm) 30%,
+    var(--color-warm) 70%,
+    transparent
+  );
+  opacity: 0.35;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -154,5 +195,14 @@ body {
 
   .dish-zoom {
     transform: none !important;
+  }
+
+  .whatsapp-bar-enter {
+    transform: none;
+    opacity: 1;
+  }
+
+  .whatsapp-bar-visible {
+    transition: none;
   }
 }
