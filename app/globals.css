@@ -58,6 +58,67 @@ body {
   background: color-mix(in srgb, currentColor 12%, transparent);
 }
 
+/* Hero: cinematic Ken Burns on the background image */
+@keyframes kenburns {
+  from {
+    transform: scale(1.02);
+  }
+  to {
+    transform: scale(1.12) translate(-1.5%, 1%);
+  }
+}
+
+.hero-kenburns {
+  animation: kenburns 22s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* Hero: cascading entrance (logo → title → tagline → CTAs → hint) */
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.hero-rise {
+  opacity: 0;
+  animation: hero-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-delay-1 {
+  animation-delay: 0.1s;
+}
+.hero-delay-2 {
+  animation-delay: 0.2s;
+}
+.hero-delay-3 {
+  animation-delay: 0.32s;
+}
+.hero-delay-4 {
+  animation-delay: 0.48s;
+}
+
+@keyframes hero-scroll-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(4px);
+  }
+}
+
+.hero-scroll-hint {
+  animation: hero-scroll-pulse 2s ease-in-out infinite;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(12px);
@@ -78,6 +139,17 @@ body {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  .hero-kenburns,
+  .hero-scroll-hint {
+    animation: none;
+  }
+
+  .hero-rise {
+    opacity: 1;
+    transform: none;
+    animation: none;
   }
 
   .dish-zoom {

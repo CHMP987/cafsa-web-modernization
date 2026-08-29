@@ -13,12 +13,8 @@ export function Reveal({
   const [inView, setInView] = useState(false);
 
   useEffect(() => {
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) {
-      setInView(true);
-      return;
-    }
-
+    // Reduced-motion is handled in CSS (.reveal is fully visible there), so
+    // only the IntersectionObserver drives visibility for everyone else.
     const node = ref.current;
     if (!node) return;
 

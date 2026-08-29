@@ -2,6 +2,9 @@ const IMG = "https://dyj6gt4964deb.cloudfront.net/images";
 
 const whatsappMessage = "Hola, quisiera reservar una mesa en Lubnan.";
 
+// Reused across the dish grid and the narrative section.
+const mixturaImage = `${IMG}/dca70e1c-3a3f-4706-865a-ae2e91a2c281.jpeg`;
+
 export type Dish = {
   name: string;
   image: string;
@@ -65,10 +68,10 @@ export const content: RestaurantSite = {
     { name: "Hummus", image: `${IMG}/2fedf603-7bdb-483b-a158-38e057d31536.jpeg` },
     { name: "Kibbeh", image: `${IMG}/5d28c3d7-8711-4b4b-9a0c-63fd8996113b.jpeg` },
     { name: "Costillas de Cordero", image: `${IMG}/1bfb25dd-337c-40eb-8d70-13ea1fb7163c.jpeg` },
-    { name: "Mixtura Lubnan", image: `${IMG}/dca70e1c-3a3f-4706-865a-ae2e91a2c281.jpeg` },
+    { name: "Mixtura Lubnan", image: mixturaImage },
   ],
   narrative: {
-    image: `${IMG}/dca70e1c-3a3f-4706-865a-ae2e91a2c281.jpeg`,
+    image: mixturaImage,
     imageAlt: "Mixtura Lubnan",
     phrases: [
       "Desde el mediterráneo de Beirut",

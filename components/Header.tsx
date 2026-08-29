@@ -16,6 +16,12 @@ export function Header() {
           <Link href="/#visitanos" className="hover:text-lubnan">
             Visítanos
           </Link>
+          <a
+            href={content.whatsappHref}
+            className="btn-primary hidden px-4 py-2 text-xs sm:inline-flex"
+          >
+            Reservar mesa
+          </a>
         </nav>
       </div>
     </header>

@@ -36,7 +36,7 @@ export function Visit() {
             {content.hours.map((row) => (
               <div key={row.day} className="flex justify-between gap-4 py-2.5 text-sm">
                 <dt className="font-medium">{row.day}</dt>
-                <dd className={row.time === "Cerrado" ? "text-lubnan" : "text-paper/80"}>
+                <dd className={row.time === "Cerrado" ? "text-red-400" : "text-paper/80"}>
                   {row.time}
                 </dd>
               </div>

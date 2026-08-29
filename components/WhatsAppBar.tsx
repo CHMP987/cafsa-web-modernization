@@ -9,8 +9,9 @@ export function WhatsAppBar() {
   useEffect(() => {
     const hero = document.getElementById("inicio");
     if (!hero) {
-      setVisible(true);
-      return;
+      // No hero section on the page — always show the bar.
+      const raf = requestAnimationFrame(() => setVisible(true));
+      return () => cancelAnimationFrame(raf);
     }
 
     const io = new IntersectionObserver(

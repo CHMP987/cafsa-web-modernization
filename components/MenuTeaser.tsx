@@ -5,17 +5,19 @@ import { content } from "@/lib/content";
 function DishCard({ name, image }: { name: string; image: string }) {
   return (
     <figure className="group">
-      <div className="relative aspect-[4/5] overflow-hidden bg-ink/5">
+      <div className="relative aspect-[4/5] overflow-hidden bg-ink/5 shadow-sm transition-[box-shadow] duration-300 group-hover:shadow-[0_22px_45px_-18px_rgba(22,22,22,0.45)]">
         <Image
           src={image}
           alt={name}
           fill
           quality={90}
-          className="dish-zoom object-cover transition-transform duration-200 group-hover:scale-[1.03]"
+          className="dish-zoom object-cover transition-transform duration-300 group-hover:scale-[1.06]"
           sizes="(max-width: 640px) 50vw, 50vw"
         />
       </div>
-      <figcaption className="mt-2 text-sm font-medium">{name}</figcaption>
+      <figcaption className="mt-2 text-sm font-medium transition-colors duration-300 group-hover:text-lubnan">
+        {name}
+      </figcaption>
     </figure>
   );
 }
